@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.cssm.common.dao.UserMapper" >
+
+  <select id="selectByPrimaryKey" resultType="com.cssm.common.pojo.User" >
+    select userId,userName ,password,gender from user where  userId = #{userId}
+  </select>
+
+  <insert id="insert" parameterType="com.cssm.common.pojo.User" useGeneratedKeys="true" >
+    insert into user (userId,userName ,password,gender ) values (#{userId},#{userName},#{password},#{gender})
+  </insert>
+
+  <delete id="deleteByPrimaryKey">
+    delete from user where  userId = #{userId}
+  </delete>
+
+</mapper>
