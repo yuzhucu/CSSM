@@ -23,37 +23,11 @@
     
     <!-- 定义数据源的信息 -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"  destroy-method="close">
-         <property name="driverClassName" value="${jdbc_driverClassName}" />
-        <property name="url" value="${jdbc_url}"  />
-        <property name="username" value="${jdbc_username}" />
-        <property name="password" value="${jdbc_password}" />
+        <property name="driverClassName" value="${jdbc.driverClassName}" />
+        <property name="url" value="${jdbc.url}"  />
+        <property name="username" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
       
-    <!-- 
-        <property name="driverClassName">
-            <value>com.mysql.jdbc.Driver</value>
-        </property>
-        <property name="url">
-            <value>jdbc:mysql://localhost:3306/test</value>
-        </property>
-        <property name="user">
-            <value>root</value>
-        </property>
-        <property name="password">
-            <value>root</value>
-        </property>
-        <property name="maxPoolSize">
-            <value>80</value>
-        </property>
-        <property name="minPoolSize">
-            <value>1</value>
-        </property>
-        <property name="initialPoolSize">
-            <value>1</value>
-        </property>
-        <property name="maxIdleTime">
-            <value>20</value>
-        </property>
-      -->
     </bean>
 
     <!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
